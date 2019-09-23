@@ -2,7 +2,7 @@
 
 ![wordclock](wordclock.png)
 
-My wife was searching for an affordable word clock for quite some time. We finally decided for a model with corten steel plate from [build-yours.de].
+My wife was searching for an affordable word clock for quite some time. We finally decided for a model with corten steel plate from [build-yours.de](https://build-yours.de).
 The kit was good quality and not so difficult to build. I slightly changed the build by using screws for the back plate so I could get access when 
 I need to fix something. This actually proved to be quite helpful.
 
