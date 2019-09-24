@@ -2,6 +2,8 @@
 
 ![wordclock](wordclock.png)
 
+Firmware for a ESP8266 powered word clock that drives a WS28xx strip of LEDs. So while this is primarily developed for the word clock I use it should be easy to adapt to a different layout or language of the clock.
+
 My wife was searching for an affordable word clock for quite some time. We finally decided for a model with corten steel plate from [build-yours.de](https://build-yours.de).
 The kit was good quality and not so difficult to build. I slightly changed the build by using screws for the back plate so I could get access when 
 I need to fix something. This actually proved to be quite helpful.
