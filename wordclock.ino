@@ -141,7 +141,6 @@ void loop()
 
 void connectWifi() {
   WiFiManager wifiManager;
-  wifiManager.resetSettings();
   wifiManager.autoConnect("Wordclock");
 }
 
