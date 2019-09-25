@@ -27,6 +27,14 @@ The wiring is similar to the original word clock but the signal pin is RX not G4
 
 So you need 5V, GND, RX. Be very careful to not short circuit anything as it easily fries your ESP. Also do not connect the signal pin while uploading the firmware.
 
+## Connect to Wifi
+
+After uploading the sketch to your ESP8266 it will restart and try to connect to Wifi.
+If it already has stored settings it will auto connect.
+
+If not then it will open a Wifi network "Wordclock".
+Connect to this network and set up your real Wifi network by pointing the browser to http://192.168.4.1 .
+
 ## Customizing
 
 If you have a different work clock then you need to change the setup of the words (start and end LED number). This quite some work but pretty easy.
