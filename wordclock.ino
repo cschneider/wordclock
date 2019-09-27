@@ -79,12 +79,12 @@ Word acht(17, "acht");
 Word elf(22, "elf");
 Word neun(25, "neun");
 Word vier(29, "vier");
-Word fuenf(33, "fünf");
+Word fuenf(33, "funf"); // Using not ü as it counts as 2 letters
 Word drei(39, "drei");
 Word zwei(44, "zwei");
-Word eins(46, "eins");
+Word eins(46, "ein");
 Word sieben(49, "sieben");
-Word zwoelf(56, "zwölf");
+Word zwoelf(56, "zwolf");
 Word halb(62, "halb");
 Word nach(68, "nach");
 Word vor(72, "vor");
@@ -92,7 +92,7 @@ Word viertel(77, "viertel");
 Word dreiviertel(77, "dreiviertel");
 Word zehnm(88, "zehn");
 Word zwanzigm(92, "zwanzig");
-Word fuenfm(99, "fünf");
+Word fuenfm(99, "funf");
 Word ist(104, "ist");
 Word es(108, "es");
 Word none(0, "");
@@ -123,9 +123,9 @@ void setup()
     strip.Begin();
     strip.ClearTo(black);
     strip.Show();
-    timeClient.begin();
 
     connectWifi();
+    timeClient.begin();
     updateSystemTimeFromNtp();
 }
 
@@ -168,15 +168,15 @@ void diplayTimeOnWordClock() {
 }
 
 void updateSystemTimeFromNtp() {
-    timeClient.update();
-    unsigned long epochTime =  timeClient.getEpochTime();
-    time_t utc = epochTime;
+  timeClient.update();
+  unsigned long epochTime =  timeClient.getEpochTime();
+  time_t utc = epochTime;
 
-    // Central European Time (Frankfurt, Paris)
-    TimeChangeRule CEST = {"CEST", Last, Sun, Mar, 2, 120};     // Central European Summer Time
-    TimeChangeRule CET = {"CET ", Last, Sun, Oct, 3, 60};       // Central European Standard Time
-    Timezone CE(CEST, CET);
-    time_t local = CE.toLocal(utc);
-    setTime(local);
-    minutesSinceLastUpdate = 0;
+  // Central European Time (Frankfurt, Paris)
+  TimeChangeRule CEST = {"CEST", Last, Sun, Mar, 2, 120};     // Central European Summer Time
+  TimeChangeRule CET = {"CET ", Last, Sun, Oct, 3, 60};       // Central European Standard Time
+  Timezone CE(CEST, CET);
+  time_t local = CE.toLocal(utc);
+  setTime(local);
+  minutesSinceLastUpdate = 0;
 }
